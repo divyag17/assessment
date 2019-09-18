@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<meta charset="UTF-8" />
+<title>first page</title>
+</head>
+<body>
+<div th:object="book:${receipes}">
+<div class="container">
+<h3>name</h3>    
+  <p th:text="${book.name}">
+  
+  </p>  
+</div>
+<div class="container">
+<h3>cooking time</h3>    
+  <p th:text="${book.cookingtime}">
+  
+  </p>  
+</div> 
+<div class="container">
+<h3>defficulty</h3>    
+  <p th:text="${book.difficulty}">
+  
+  </p>  
+</div> 
+<div class="container">
+<h3>directions</h3>    
+  <p th:text="${book.directions}">
+  
+  </p>  
+</div> 
+<div class="container">
+<h3>name</h3>    
+  <p th:text="${book.source}">
+  
+  </p>  
+</div>  
+</div>
+</body>
+</html>

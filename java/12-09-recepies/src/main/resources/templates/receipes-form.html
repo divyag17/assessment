@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container">
+	
+		<h3>recipes</h3>
+		<hr>
+		
+		<p class="h4 mb-4">save recipes</p>
+	
+		<form action="#" th:action="@{/save}"
+						 th:object="${receipes}" method="POST">
+		
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" th:field="*{id}" />
+			<input type="text" th:field="*{name}"
+					class="form-control mb-4 col-4" placeholder="cooking time">
+			
+			<input type="text" th:field="*{cookingtime}"
+					class="form-control mb-4 col-4" placeholder="cooking time">
+
+			<input type="text" th:field="*{difficulty}"
+					class="form-control mb-4 col-4" placeholder="difficulty">
+
+			<input type="text" th:field="*{directions}"
+					class="form-control mb-4 col-4" placeholder="directions">
+				
+				<input type="text" th:field="*{source}"
+					class="form-control mb-4 col-4" placeholder="source">
+				
+			<button type="submit" class="btn btn-info col-2">add</button>
+						
+		</form>
+	
+		<hr>
+		<a th:href="@{/receipes}">Back </a>
+		
+	</div>
+</body>
+</html>

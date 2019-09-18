@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<meta charset="UTF-8" />
+<title>first page</title>
+</head>
+<body>
+<h1>receipe List</h1>
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+
+				
+				<th scope="col">#ID</th>
+				<th scope="col">NAME</th>
+				<th scope="col">COOKINGTIME</th>
+				<th scope="col">DIFFICULTY</th>
+				<th scope="col">DIRECTIONS</th>
+				<th scope="col">SOURCE</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="book : ${receipes}">
+				
+				<td th:text="${book.id}">123</td>
+				<td th:text="${book.name}">Spring in Action</td>
+				<td th:text="${book.cookingtime}">Wrox</td>
+				<td th:text="${book.difficulty}">Wrox</td>
+				<td th:text="${book.directions}">Wrox</td>
+				<td th:text="${book.source}">Wrox</td>
+				
+			</tr>
+	</table>
+</body>
+</html>
